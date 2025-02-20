@@ -1,0 +1,19 @@
+import random
+
+def generate_random_numbers(start=1, end=100):
+    return [random.randint(start, end) for _ in range(4)]  # Generate 4 random numbers
+
+try:
+    # Taking user input for range
+    start = int(input("Enter the start of the range: "))
+    end = int(input("Enter the end of the range: "))
+
+    # Checking if the range is valid
+    if start > end:
+        print("Invalid range! Start should be less than or equal to end.")
+    else:
+        random_numbers = generate_random_numbers(start, end)
+        print("Generated random numbers:", random_numbers)
+
+except ValueError:
+    print("Invalid input! Please enter valid integers.")

@@ -1,0 +1,12 @@
+def sum_of_digits(n):
+    return sum(int(digit) for digit in str(abs(n)))  # Convert to string, take absolute value, and sum digits
+
+# Taking user input
+user_input = input("Enter a number to find the sum of its digits: ")
+
+# Checking if the input is a valid number
+if user_input.isdigit() or (user_input.startswith('-') and user_input[1:].isdigit()):
+    num = int(user_input)
+    print(f"The sum of the digits is: {sum_of_digits(num)}")
+else:
+    print("Invalid input! Please enter a valid number.")
